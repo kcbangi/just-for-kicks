@@ -87,7 +87,23 @@ decPrice.addEventListener("click", function() {
 
 //7. Add an event to the Air Jordan XI shoe that will show another colorway for that shoe after hovering over the image. 
 
-//8. Add an event to the Air Jordan XII shoe that will increase the image by 50% after clicking on the image.
+let jordan11 = document.querySelector("#main > div:nth-child(3) > div.block3.col-sm-4 > img");
+
+jordan11.addEventListener("mouseover", function() {
+    jordan11.src = "https://www.sneakerlegends.com/images/stories/virtuemart/product/(BRAND%20NEW)%20Jordan%2011%20Retro%20Concord%20(2018).jpg";
+});
+jordan11.addEventListener("mouseout", function() {
+    jordan11.src = "https://www.sneakerlegends.com/images/stories/virtuemart/product/378037623%20378037623%20378037623%20378037623.jpg";
+});
+
+//8. Add an event to the Air Jordan XII shoe that will increase the image by 100% after clicking on the image.
+
+let jordan12 = document.querySelector("#main > div:nth-child(4) > div.block1.col-sm-4 > img");
+
+jordan12.addEventListener("click", function() {
+    jordan12.style.height = "150%";
+    jordan12.style.width = "150%";
+});
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
