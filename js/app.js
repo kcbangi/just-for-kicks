@@ -14,11 +14,11 @@ let descrip1 = document.querySelector("#descrip1")
 name1.addEventListener("mouseover", function() {
     // console.log(descrip1);
     if(descrip1.style.display == 'block'){
-        descrip1.style.display = 'none'
-    }else{
-        descrip1.style.display = 'block'
+        descrip1.style.display = 'none';
+    } else {
+        descrip1.style.display = 'block';
     }
-})
+});
 
 //3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
 //'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
@@ -36,9 +36,9 @@ name2.addEventListener("click", function() {
     // console.log(descrip2);
     name2.appendChild(descrip2);
     if(descrip2.style.display == 'block'){
-        descrip2.style.display = 'none'
+        descrip2.style.display = 'none';
     }else{
-        descrip2.style.display = 'block'
+        descrip2.style.display = 'block';
     }
 });
 
@@ -107,6 +107,27 @@ jordan12.addEventListener("click", function() {
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
 
+let inc8 = document.querySelector("#oneUp");
+let dec8 = document.querySelector("#oneDown");
+let price8 = document.querySelector("#price8");
+let price8Str = document.querySelector("#price8").textContent;
+let price8Num = Number(price8Str);
+
+inc8.addEventListener("click", function() {
+    price8Num += 100;
+    price8.textContent = price8Num;
+    price8.appendChild(inc8);
+    price8.appendChild(dec8);
+});
+
+dec8.addEventListener("click", function() {
+    price8Num -= 100;
+    price8.textContent = price8Num;
+    price8.appendChild(inc8);
+    price8.appendChild(dec8);
+    
+});
+
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
 
 let jordan28 = document.querySelector("#main > div:nth-child(4) > div.block3.col-sm-4 > img");
@@ -114,3 +135,4 @@ let jordan28 = document.querySelector("#main > div:nth-child(4) > div.block3.col
 jordan28.addEventListener("click", function() {
     jordan28.src = "https://media.npr.org/assets/img/2016/03/29/ap_090911089838_sq-3271237f28995f6530d9634ff27228cae88e3440-s800-c85.jpg";
 });
+
